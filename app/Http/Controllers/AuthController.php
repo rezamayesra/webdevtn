@@ -14,6 +14,18 @@ class AuthController extends Controller
             'username' => $request->username,
             'password' => $request->password
         ];
+        
+        $admin = [
+            'driver' => $request->session,
+            'provider' => $request->admin
+        ];
+
+        $user = Auth::attempt($admin);
+        if(Auth::check()){
+            return redirect()->route('company.dashboard');
+        }else{
+            return back();
+        }
 
         $user = Auth::attempt($data);
         if(Auth::check()){
