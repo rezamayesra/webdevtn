@@ -1,6 +1,6 @@
 @extends('admin.main')
 @section('title')
-    Artikel
+    $article->title | TimbangNganggur
 @endsection
 @section('style')
     <link rel="stylesheet" href="{{ asset('plugins/summernote/summernote-bs4.css') }}">
@@ -40,7 +40,7 @@
                 <!-- /. tools -->
               </div>
               <!-- /.card-header -->
-                <form action="{{ route('artikel.store',[$articlesall->tag,Str::slug($articlesall->title)]) }}" method="POST" enctype="multipart/form-data">
+                <form action="{ route('artikel.store',[$articlesall->tag,Str::slug($articlesall->title)]) }" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="card-body pad">
                         <div class="form-group">
