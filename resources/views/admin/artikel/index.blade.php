@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="{{ asset('plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
 @endsection
 @section(‘title’) 
-    $article->title | TimbangNganggur 
+    $article->title | TimbangNganggur
 @endsection
 @section('content')
 <div class="content-wrapper">
