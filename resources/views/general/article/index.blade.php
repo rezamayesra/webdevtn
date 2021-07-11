@@ -4,6 +4,9 @@
 @section('title')
     Timbangnganggur | Website Informatif & Edukatif untuk Persiapan Diri di Dunia Kerja
 @endsection
+@section(‘title’) 
+    $article->title | TimbangNganggur 
+@endsection
 @section('style')
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 @endsection
