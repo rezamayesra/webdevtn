@@ -45,11 +45,15 @@ class ArticleController extends Controller
      * @param  \App\Models\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function show(Article $article)
+    public function show($slug)
     {
-        //
+        $article = Article::where('slug','LIKE','%'.$slug.'%')->first();
+        $article->view_count = $article->view_count+1;
+        return view('general.artikel.show',compact('article'));
     }
 
+
+    
     /**
      * Show the form for editing the specified resource.
      *
